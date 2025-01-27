@@ -1,0 +1,10 @@
+div {
+    display: flex;
+    flex-direction: row;
+}
+div a {
+    border: 2px solid blue;
+    background-color:aquamarine;
+    font-weight: bold;
+    font-style: cursive;
+}

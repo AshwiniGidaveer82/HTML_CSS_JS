@@ -1,0 +1,25 @@
+
+<head>
+    
+    <title>querySelectorAll()</title>
+</head>
+<body>
+    <p class="para">Paragraph 1</p>
+    <p class="para">Paragraph 2</p>
+    <p class="para">Paragraph 3</p>
+    <button onclick="fun()">Click</button>
+
+    <script>
+        function fun() {
+        const target = document.querySelectorAll(".para");
+        console.log(target, "target before update is:", target.length);  // static Nodelist
+
+        const newEle = document.createElement('p');
+        newEle.textContent = 'Paragraph 3';
+        newEle.classList.add('para');
+        document.body.appendChild(newEle);
+        console.log("target after udated is:", target.length);
+        }
+    </script>
+</body>
+</html>

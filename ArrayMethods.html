@@ -1,0 +1,93 @@
+<!--script>
+    let arr = [11,22,33,44,55,66]
+    console.log(arr, typeof arr);
+    Array.isArray(arr);
+
+    arr.push(19);
+    console.log(arr); // adding element at last //
+
+    arr.pop();
+    console.log(arr); // remove the  last element//
+
+    arr.unshift(10);
+    console.log(arr); // adds the first index of the array//
+
+    arr.shift();
+    console.log(arr);  // removes the 0th index element//
+</script-->
+
+<script>
+    let numbers = [11,22,33,44,55,66]
+    console.log(numbers);
+    console.log("Deleted Element: ", numbers.splice(1,2, 789, 'kod', true));
+    console.log(numbers); // Deleted Element//
+
+    let arr = [11,22,33,,44,55,,66,77]
+    console.log(arr);
+    console.log("DeleteCount ", arr.splice(1,4,500));
+    console.log(arr); // DelectCount//
+
+    let arr1 = [89,246,2892,289,2902]
+    console.log(arr1);
+    console.log("Slice", arr1.slice(1,3));
+    console.log(arr1);
+
+    arr2 = [1,2,3,4,5,6]
+    let sum = 0;
+    for (let i = 0; i < 4; i++) {
+        sum = sum + arr2[i];
+    }
+    console.log("Sum is", sum);
+
+    arr3 = [1,2,3,4,5,6,7,8,9]
+    let sum1 = 0;
+    for (let i = 0; i < 10; i++) {
+        sum2 = sum1 + arr2[i];
+    }
+    console.log("Sum is", sum2);
+
+
+     // Higher Order Functions (12/11/24) //
+
+     // Filter //
+
+    arr4 = [1,2,3,4,5,6]
+    even = arr4.filter((ele) => ele % 2 === 0);
+        console.log(even);
+
+    arr5 = [1,2,3,,4,5,6,7,8]
+    even = arr5.filter(function(ele) {
+        if (ele % 2 === 0) {
+            return ele;
+        }
+    });
+    console.log(even);
+
+    // Map //
+
+    arr6 = [1,2,3,4,5,6]
+    sq = arr6.map(ele => ele * ele);
+    console.log(sq);
+
+    arr6 = [1,2,3,4,5,6]
+    sq = arr6.map(function(ele) {
+        return ele * ele;
+    })
+    console.log(sq);
+
+    arr6 = [1,2,3,4,5,6]
+    prod = arr6.reduce(function(acc , ele) {
+        return acc * ele;
+    }, 1);
+    console.log(prod);
+
+    arr6 = [1,2,3,4,5,6]
+    prod = arr6.reduce(function(acc , ele) {
+        return acc * ele;
+    }, 2);
+    console.log(prod);
+
+    arr6 = [1,2,3,4,5]
+    prod = arr6.reduce((acc, ele) => acc * ele, 1);
+    console.log(prod);
+</script>

@@ -1,0 +1,117 @@
+<script>
+    function placeOrder(item, callback) {
+        setTimeout(() => {
+            console.log("item placed for", item);
+            callback();
+        }, 2000);
+    }
+
+    function makePayment(amt, callback) {
+        setTimeout(()=> {
+            console.log("amount payed", amt);
+            callback();
+        }, 1000);
+    }
+
+    function orderConfirm(callback) {
+        setTimeout(()=> {
+            console.log("order confirmed....!");
+            callback();
+        }, 2000);
+    }
+
+    function emailSent(callback) {
+        setTimeout(()=> {
+            console.log("Successfull order confirmation....!");
+            callback();
+        }, 3000);
+    }
+    placeOrder('shirt', ()=> {
+        makePayment(2000, ()=> {
+            orderConfirm(()=> {
+                emailSent(()=> {
+
+                });
+            });
+        });
+    });
+    // placeHolder('Shirt')
+    // .then(()=> Payment(2500))
+    // .then(()=> orderConfirmed())
+    // .then(()=> EmailSent())
+    // .then(()=> console.log("Process Ended...."))
+    // .catch((msg)=> console.log(msg));
+    // console.log("some other independent task ")
+</script>
+
+
+
+
+
+<!--script>
+
+    function placeOrder(item,callback){
+   
+       setTimeout(()=>{
+   
+           console.log('Order Placed for: ',item);
+   
+           callback();
+   
+       },2000);
+   
+    }
+   
+    
+   
+    function makePayment(amt,callback){
+   
+       setTimeout(()=>{
+   
+           console.log('Amount Received: ',amt);
+   
+           callback();
+   
+       },1000);
+   
+    }
+   
+    function confirmOrder(callback){
+   
+       setTimeout(()=>{
+   
+           console.log('Ordered Confirmed..!');
+   
+           callback();
+   
+       },2000)
+   
+    }
+   
+    function sentEmail(){
+   
+       setTimeout(()=>{
+   
+           console.log('Successful Order Confirmation Email Sent');
+   
+       },3000);
+   
+    }
+   
+   placeOrder('Shirts',()=>{
+   
+       makePayment(2500,()=>{
+   
+           confirmOrder(()=>{
+   
+               sentEmail()
+   
+           })
+   
+       })
+   
+   })
+   
+    console.log('Some other Independant Tasks');
+   
+   </script-->

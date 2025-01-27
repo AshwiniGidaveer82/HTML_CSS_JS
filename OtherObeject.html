@@ -1,0 +1,60 @@
+<!--script>
+    let arr1 = [11,22,33,44,55]
+    console.log(arr1, typeof arr1);
+
+    /* JSON (JAVA SCRIPT OBJECT NOTATION) */
+    let s1 = {
+        name: 'ashu',
+        age: 23,
+        email: 'ashu@.com',
+        marks: [89 , 89 , 90]
+    }
+    console.log(s1, typeof s1);
+    console.log(s1.name);
+    console.log(s1.marks);
+
+    let s2 = {
+        name: 'Ayush',
+        age: 24,
+        email: {el:'a@.com',
+        e2:'b@.com'
+        }
+    }
+    console.log(s2, typeof s2);
+    console.log(s2.name);
+    console.log(s2.email);
+    console.log(s2.age);
+</script-->
+
+<script>
+    let s1 = {
+        name: 'Ashwini',
+        age: 23,
+        eat: function() {
+            console.log('Ashwini is eating');
+        },
+        work: function() {
+            console.log('Ashwini is working')
+        }
+    }
+    console.log(s1);
+    console.log(s1.name, s1.age);
+    console.log(s1.eat);
+    s1.eat();
+    s1.work();
+
+
+    let employee1 = {
+        Emp_id: 101,
+        Emp_name: 'Krishna',
+        Emp_sal: 20000,
+        eat: ()=> {
+            return 'Krishna is eating'
+        },
+        work: ()=> {
+            return 'Krishna is working'
+        }
+    }
+    console.log(employee1.Emp_id, employee1.Emp_name, employee1.Emp_sal, employee1.eat);
+    employee1.work()
+</script>

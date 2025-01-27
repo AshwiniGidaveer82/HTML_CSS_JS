@@ -1,0 +1,32 @@
+<!--script>
+    // Variable can access when before it's declaration of "var"// 
+
+    var a = 100;
+    console.log(b);
+    let b = 200;
+    console.log(c); // Error(c cannotdefined) //
+    console.log(d);
+    var d = 300;
+    console.log(d);
+</script-->
+
+<script>
+    // The variable which are declare using "let" will be store inside temporal dead zone.The temporal dead zone is area of zone where uninitialized variable will be stored. if programmer access the variable inside tdz will get reference error // 
+
+    console.log(b); // Reference Error //
+    let b = 100;
+
+    console.log(c);
+    var c = 200;
+
+    let e = 300;
+    console.log(e);
+
+    add();
+    function add() {
+    var a = 10;
+    var b = 20;
+    console.log(a+b);
+    }
+
+</script>

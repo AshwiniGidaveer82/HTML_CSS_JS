@@ -1,0 +1,28 @@
+
+<head>
+    
+    <title>getElementByIdName()</title>
+</head>
+<body>
+    <p class="Container">Para 1</p>
+    <p class="Container">Para 2</p>
+    <p class="Container">Para 3</p>
+    <p class="Container">Para 4</p>
+    <button onclick="fun()">Click</button>
+    <script>
+        function fun() {
+        const target = document.getElementsByClassName("Container");
+        console.log("Length before is:", target.length);
+
+        const newEle = document.createElement('p');//<p></p>//
+        const newEle1 = document.createElement('div');//<p></p>//
+        console.log(newEle);
+        newEle.textContent="Hello"; //<p>Hello</p>//
+        newEle.innerHTML= `<h3 style="color: purple">Hello</h3>`; //<h3 style="color: purple"><h3>
+        newEle.classList.add('Container'); // <p class="container">Hello</p>
+        document.body.appendChild(newEle);
+        console.log("Length after update is:", target.length);
+        }
+    </script>
+</body>
+</html>

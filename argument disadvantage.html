@@ -1,0 +1,38 @@
+<!--arguments object wont support all Array Methods.(flter, map, redeuce)-->
+
+<script>
+
+    function add(){//[10,20,30]
+
+        if(arguments.length === 0){
+
+            console.log('No Arguments...!');
+
+        }
+
+        else {
+
+            //let sum = 0;
+
+            //for(let i=0;i<arguments.length;i++){
+
+                //sum = sum + arguments[i];
+
+            let sum = () => {
+
+            let sum = arguments.reduce((acc,ele) => acc + ele,0);//Not Allowed
+
+            console.log('Sum of Arguments is',sum);
+
+        }
+    }
+}
+sub();
+
+ 
+
+   
+
+ 
+
+</script>
